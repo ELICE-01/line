@@ -234,7 +234,7 @@ def check_trello_cards():
         logger.error(f"檢查 Trello 卡片失敗：{e}")
 
 scheduler = BackgroundScheduler()
-scheduler.add_job(check_trello_cards, 'interval', minutes=30)
+scheduler.add_job(check_trello_cards, 'interval', minutes=5)
 scheduler.start()
 
 if __name__ == "__main__":
